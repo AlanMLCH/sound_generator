@@ -1,0 +1,14 @@
+numpy
+pandas
+torch
+torchaudio
+tqdm
+pretty_midi
+mido
+scikit-learn
+matplotlib
+optuna
+pyyaml
+fastapi
+uvicorn[standard]
+jinja2

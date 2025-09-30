@@ -1,0 +1,29 @@
+# data/sources.yaml
+sources:
+  - name: maestro-v3
+    type: http
+    url: https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip
+    archive_type: zip          # zip | tar | tar.gz
+    target_subdir: maestro_v3
+    include_glob:
+      - "**/*.mid"
+      - "**/*.midi"
+
+  #- name: lmd-matched
+  #  type: http
+  #  url: http://hog.ee.columbia.edu/craffel/lmd/lmd_matched.tar.gz
+  #  archive_type: tar.gz       # zip | tar | tar.gz
+  #  target_subdir: lmd_matched
+  #  include_glob:
+  #    - "**/*.mid"
+  #    - "**/*.midi"
+
+  # Example Kaggle dataset (requires kaggle CLI + creds)
+  # - name: some-kaggle-midi
+  #   type: kaggle
+  #   kaggle_dataset: username/dataset-slug
+  #   file: ""                 # optional; leave empty to download all files
+  #   target_subdir: kaggle_midi
+  #   include_glob:
+  #     - "**/*.mid"
+  #     - "**/*.midi"

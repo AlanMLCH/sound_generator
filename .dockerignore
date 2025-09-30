@@ -1,0 +1,9 @@
+.git
+.gitignore
+artifacts/*
+data/interim/*
+data/processed/*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# Env/Secrets
+.env
+.venv/
+venv/
+.env.*
+
+# Project data (do NOT push)
+data/raw/
+data/interim/
+data/processed/
+data/external/
+!data/.gitkeep            # keep folder structure with placeholders
+
+# Artifacts & models
+artifacts/
+!artifacts/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.npz
+*.npy
+*.ckpt
+runs/
+logs/
+
+# OS misc
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
