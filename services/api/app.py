@@ -55,7 +55,9 @@ def generate(req: GenerateRequest):
     # Build conditioning vector from selected instruments
     instr_ids = [INSTRUMENT_MAP.get(i.lower(), INSTRUMENT_MAP["piano"]) for i in req.instruments]
     with torch.no_grad():
-        tokens = sample_sequence(model, vocab, steps=req.steps, temperature=req.temperature, cond_instruments=instr_ids, device=device)
+        tokens = sample_sequence(model, vocab, steps=req.steps, temperature=req.temperature, top_p=0.9,
+                         cond_instruments=instr_ids, device=device)
+
 
     # Convert tokens to MIDI
     pm = vocab.tokens_to_pretty_midi(tokens, tempo=req.tempo or 120)
